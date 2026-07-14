@@ -48,13 +48,13 @@ Snake-Game/
 1. Clone this repository:
 
 ```bash
-git clone https://github.com/your-username/snake-game.git
+git clone https://github.com/shoum217-cpu/Snake-Game.git
 ```
 
 2. Navigate to the project folder:
 
 ```bash
-cd snake-game
+cd Snake-Game
 ```
 
 3. Open the `index.html` file in your preferred web browser.
