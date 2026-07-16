@@ -77,7 +77,6 @@ gameEngine = () => {
     for (let i = snakeArr.length - 2; i >= 0; i--) { // snake array as an array ke liye 
         snakeArr[i + 1] = { ...snakeArr[i] }
     }
-    musicSound.play();
     snakeArr[0].x += inputDir.x; //x me badho and y me badho
     snakeArr[0].y += inputDir.y;
     direction = { x: inputDir.x, y: inputDir.y }
@@ -117,6 +116,10 @@ document.querySelector('.HighScore').innerHTML = "Highest Score: " + HighScore;
 
 window.requestAnimationFrame(main);
 window.addEventListener('keydown', (pressedKey) => { //keypress is not used for printable characters.. so we use keydown
+
+    if (musicSound.paused) {
+        musicSound.play(); // only starts if it isn't already playing
+    }
 
     switch (pressedKey.key) {
         case "ArrowUp":
